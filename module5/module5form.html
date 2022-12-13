@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jasmin Lumme" />
+    <meta name="description" content="simple PHP form" />
+
+    <title>Form Posting</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/module5styles.css" />
+  </head>
+  <body>
+    <!-- Script 5.1 - posting.html -->
+    <main>
+      <h1>Module 5 form example</h1>
+
+      <p>Please complete this form to access the site:</p>
+
+      <form action="module5script.php" method="post">
+        <fieldset>
+          <legend>Name</legend>
+          <div class="input_container">
+            <label for="first_name">First name:</label
+            ><input
+              id="first_name"
+              type="text"
+              name="first_name"
+              size="20"
+              required
+            />
+          </div>
+
+          <div class="input_container">
+            <label for="last_name">Last name:</label
+            ><input
+              id="last_name"
+              type="text"
+              name="last_name"
+              size="20"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Personal details</legend>
+
+          <div class="input_container">
+            <label for="email">Email address:</label
+            ><input id="email" type="email" name="email" size="30" required />
+          </div>
+
+          <div class="input_container">
+            <label for="city">City</label
+            ><input id="city" type="text" name="city" size="30" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+
+          <div class="input_container">
+            <label for="education">Describe your education:</label
+            ><textarea
+              id="education"
+              name="education"
+              rows="9"
+              cols="30"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <input type="submit" name="submit" value="Send" />
+      </form>
+    </main>
+  </body>
+</html>

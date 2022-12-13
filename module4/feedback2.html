@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <!-- Script 3.2 - feedback.html -->
+
+    <section>
+      <h1>Feedback form</h1>
+      <p>Please complete this form to submit your feedback:</p>
+
+      <form action="handle_form2.php" method="post">
+        <p>
+          <label for="title">Title:</label>
+          <select name="title" id="title" required>
+            <option value="" selected disabled>Select title...</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mx.">Mx.</option>
+          </select>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" size="20" required />
+        </p>
+
+        <p>
+          <label for="email">Email:</label
+          ><input type="email" id="email" name="email" size="20" required />
+        </p>
+
+        <p>
+          <label for="fc">Favourite colour:</label>
+          <input id="fc" type="text" name="favcolour" size="20" required />
+        </p>
+
+        <p>
+          <label for="ff">Favourite food:</label>
+          <input id="ff" type="text" name="favfood" size="20" required />
+        </p>
+
+        <p>
+          Response: This is...
+          <input
+            type="radio"
+            name="response"
+            id="resp-exc"
+            value="excellent"
+            required
+          />
+          <label for="resp-exc">excellent</label>
+          <input type="radio" name="response" id="resp-okay" value="okay" />
+          <label for="resp-okay">okay</label>
+          <input type="radio" name="response" id="resp-boring" value="boring" />
+          <label for="resp-boring">boring</label>
+        </p>
+
+        <p>
+          <label for="comments">Comments:</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="3"
+            cols="30"
+            required
+          ></textarea>
+        </p>
+
+        <input type="submit" name="submit" value="Send My Feedback" />
+      </form>
+    </section>
+  </body>
+</html>

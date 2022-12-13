@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jasmin Lumme">
+    <meta name="description" content="simple PHP form">
+    <meta name="keywords" content="PHP, form, example">
+
+    <title>Form example</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/module7styles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Module 7 form example</h1>
+
+        <p>Please complete this form to access the site:</p>
+
+        <form action="module7script.php" method="post">
+            <fieldset>
+                <legend>Name</legend>
+                <div class="input_container">
+                    <label for="first_name">First name:</label><input id="first_name" type="text" name="first_name"
+                        size="20" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Favorite days of the week</legend>
+                <div class="input_container checkbox_container">
+                    <label>
+                        <input value="Monday" type="checkbox" name="fav_days[]">
+                        Monday
+                    </label>
+                    <label>
+                        <input value="Tuesday" type="checkbox" name="fav_days[]">
+                        Tuesday
+                    </label>
+                    <label>
+                        <input value="Wednesday" type="checkbox" name="fav_days[]">
+                        Wednesday
+                    </label>
+                    <label>
+                        <input value="Thursday" type="checkbox" name="fav_days[]">
+                        Thursday
+                    </label>
+                    <label>
+                        <input value="Friday" type="checkbox" name="fav_days[]">
+                        Friday
+                    </label>
+                    <label>
+                        <input value="Saturday" type="checkbox" name="fav_days[]">
+                        Saturday
+                    </label>
+                    <label>
+                        <input value="Sunday" type="checkbox" name="fav_days[]">
+                        Sunday
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Favorite seasons</legend>
+                <div class="input_container checkbox_container">
+                    <label>
+                        <input value="spring" type="checkbox" name="fav_seasons[]">
+                        Spring
+                    </label>
+                    <label>
+                        <input value="summer" type="checkbox" name="fav_seasons[]">
+                        Summer
+                    </label>
+                    <label>
+                        <input value="fall" type="checkbox" name="fav_seasons[]">
+                        Fall
+                    </label>
+                    <label>
+                        <input value="winter" type="checkbox" name="fav_seasons[]">
+                        Winter
+                    </label>
+                </div>
+            </fieldset>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </main>
+</body>
+
+</html>

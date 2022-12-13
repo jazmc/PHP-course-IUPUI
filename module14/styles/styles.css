@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Varela+Round&display=swap");
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    transition: 0.3s all;
+}
+
+:root {
+    --bg: 244, 255, 255;
+    --dark-primary: 61, 90, 128;
+    --light-primary: 152, 193, 217;
+    --dark-secondary: 238, 108, 77;
+    --blackish: 41, 50, 65;
+    font-size: 100%;
+}
+
+body {
+    background-color: yellow;
+    background-color: rgb(var(--bg));
+    font-size: 100%;
+    font-family: "Varela Round", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    padding: 1rem;
+    width: 96%;
+    position: relative;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-bottom: 7rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    background: radial-gradient(
+            circle at 75% -10%,
+            rgb(var(--light-primary)),
+            rgba(82, 45, 0, 0) 50%
+        ),
+        radial-gradient(
+            circle at 50% 130%,
+            rgb(var(--dark-secondary)),
+            rgba(117, 0, 43, 0) 50%
+        ),
+        radial-gradient(
+            circle at 20% 50%,
+            rgb(var(--dark-primary)),
+            rgba(255, 0, 0, 0) 40%
+        ),
+        rgb(var(--blackish));
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: rgb(var(--blackish));
+    color: rgb(var(--bg));
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+}
+
+input,
+select {
+    padding: 0.5em;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    flex: 0;
+}
+
+input[type="color"] {
+    padding: 0;
+    min-width: 3rem;
+}
+
+.input_container {
+    display: flex;
+    margin: 0.5rem 0;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.input_container > * {
+    flex: 4;
+}
+
+.input_container > label {
+    flex: 1;
+}
+
+.checkbox_container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 2rem 0;
+}
+
+.checkbox_container > label {
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+.button_container {
+    justify-content: center;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0.5em 1em;
+    color: rgb(var(--bg));
+}
+
+fieldset {
+    margin: 0.5rem 0;
+    border: medium dashed rgb(var(--light-primary));
+}
+
+input[type="submit"],
+.button {
+    background-color: orange;
+    background-color: rgb(var(--dark-primary));
+    padding: 0.5em;
+    font-size: 1.2rem;
+    color: #fff;
+    outline: none;
+    border: 0;
+    font-family: inherit;
+    border: medium solid rgb(var(--dark-primary));
+    max-width: 25rem;
+    margin: 0.5rem;
+}
+
+.button.not-active {
+    background-color: transparent;
+    color: var(--blackish);
+}
+
+input.danger {
+    background-color: transparent;
+    border: medium solid rgb(var(--dark-secondary));
+}
+
+input[type="submit"]:hover,
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(var(--dark-secondary));
+    border: medium solid rgb(var(--dark-secondary));
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Chelsea Market", cursive;
+}
+
+*:not(header) > h1 {
+    color: var(--dark-primary);
+    border-left: 0.5rem solid rgb(var(--dark-primary));
+    padding-left: 1.5rem;
+    line-height: 1;
+}
+
+header > h1 {
+    color: #fefefe;
+    font-size: 3rem;
+    text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.error {
+    color: #f95738;
+}
+
+a {
+    text-decoration: none;
+}
+
+main table {
+    width: 100%;
+}
+
+main table td {
+    padding: 0.3rem 0.5rem;
+}
+
+main table th {
+    background-color: rgb(var(--light-primary));
+    color: #fefefe;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+.faketablerow {
+    background-color: rgb(var(--dark-primary));
+    font-size: 1.2rem;
+    color: #fefefe;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+.scrollable {
+    margin-bottom: 2rem;
+}
+
+.scrollable + .faketablerow {
+    margin-top: 2rem;
+}
+
+main table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main table tr:nth-child(odd) {
+    background-color: rgba(182, 124, 70, 0.1);
+}
+
+.mobile {
+    display: none;
+}
+
+/* CALENDAR */
+.calendar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    min-height: 500px;
+}
+
+.weekdays,
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 2px;
+}
+
+.dates {
+    flex: 1;
+}
+
+.datenr {
+    font-family: "Chelsea Market", cursive;
+}
+
+.day {
+    background: linear-gradient(
+        rgba(var(--light-primary), 0.3),
+        transparent 5rem
+    );
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.event {
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    border-left: 0.4rem solid rgb(var(--dark-primary));
+}
+
+.today {
+    background: linear-gradient(
+        rgba(var(--dark-secondary), 0.3),
+        transparent 5rem
+    );
+}
+
+#curtain {
+    padding: 2rem;
+    background: linear-gradient(
+        rgba(var(--dark-primary), 0.97),
+        rgba(var(--light-primary), 0.97)
+    );
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+#curtain h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(var(--bg));
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrows a,
+.addlink {
+    color: rgb(var(--dark-secondary));
+}
+
+.addlink {
+    float: right;
+}
+
+.day a {
+    color: inherit;
+}
+
+@media screen and (max-width: 60em) {
+    .calendar {
+        height: auto;
+    }
+
+    .mobile {
+        display: revert;
+    }
+
+    .weekdays {
+        display: none;
+    }
+
+    .dates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .day {
+        grid-column: auto !important;
+    }
+
+    .input_container:not(.checkbox_container) {
+        flex-direction: column;
+    }
+
+    .checkbox_container {
+        justify-content: center;
+    }
+
+    .checkbox_container > * {
+        flex: 0 !important;
+    }
+
+    .scrollable {
+        overflow-x: auto;
+    }
+
+    table td {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .checkbox_container > label {
+        flex-basis: calc(33% - 1em);
+    }
+}
+
+@media only screen and (max-width: 25em) {
+    .checkbox_container > label {
+        flex: 100%;
+    }
+
+    input[type="submit"],
+    .button {
+        display: block;
+        margin: 1rem auto;
+    }
+}
